@@ -85,33 +85,37 @@ class STTWorker:
         )
 
         try:
-            async with self._dg_client.listen.asyncwebsocket.v("1") as conn:
-                conn.on(
-                    LiveTranscriptionEvents.Transcript,
-                    self._on_transcript,
-                )
-                conn.on(
-                    LiveTranscriptionEvents.Error,
-                    self._on_error,
-                )
+            conn = self._dg_client.listen.asyncwebsocket.v("1")
+            
+            conn.on(
+                LiveTranscriptionEvents.Transcript,
+                self._on_transcript,
+            )
+            conn.on(
+                LiveTranscriptionEvents.Error,
+                self._on_error,
+            )
 
-                await conn.start(live_opts)
-                log.info("Deepgram WebSocket connected.")
+            if not await conn.start(live_opts):
+                log.error("STTWorker: Deepgram WebSocket failed to connect.")
+                return
 
-                # Feed audio chunks to Deepgram
-                while True:
-                    chunk = await self._audio_q.get()
-                    if chunk is _SHUTDOWN:
-                        log.info("STTWorker received shutdown sentinel.")
-                        break
-                    try:
-                        await conn.send(chunk)
-                    except Exception as exc:
-                        log.error("STT send error: %s — dropping chunk.", exc)
-                    finally:
-                        self._audio_q.task_done()
+            log.info("Deepgram WebSocket connected.")
 
-                await conn.finish()
+            # Feed audio chunks to Deepgram
+            while True:
+                chunk = await self._audio_q.get()
+                if chunk is _SHUTDOWN:
+                    log.info("STTWorker received shutdown sentinel.")
+                    break
+                try:
+                    await conn.send(chunk)
+                except Exception as exc:
+                    log.error("STT send error: %s — dropping chunk.", exc)
+                finally:
+                    self._audio_q.task_done()
+
+            await conn.finish()
 
         except Exception as exc:
             log.exception("STTWorker fatal error: %s", exc)

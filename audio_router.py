@@ -84,12 +84,18 @@ class AudioInputRouter:
         self._stream: Optional[sd.RawInputStream] = None
         self._active = threading.Event()
 
+    def _safe_put(self, chunk: bytes) -> None:
+        try:
+            self._queue.put_nowait(chunk)
+        except asyncio.QueueFull:
+            pass  # Silently drop raw audio frames if STT is dead or lagging
+
     def _callback(self, indata, frames, time, status):
         if status:
             log.warning("Input stream status: %s", status)
         if indata and self._active.is_set():
             chunk = bytes(indata)
-            self._loop.call_soon_threadsafe(self._queue.put_nowait, chunk)
+            self._loop.call_soon_threadsafe(self._safe_put, chunk)
 
     def start(self) -> None:
         device_index = resolve_device_index(self._cfg.input_device_index, "input")
