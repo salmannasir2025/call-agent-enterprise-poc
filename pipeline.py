@@ -23,6 +23,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import ssl
+import array
 import json
 import struct
 import os
@@ -338,6 +339,26 @@ class TTSWorker:
 
         log.info("TTSWorker: Session pool successfully drained and terminated.")
 
+    def _apply_fade_out(self, pcm: bytes, fade_samples: int = 480) -> bytes:
+        """Apply a smooth linear fade-out to the final samples of a PCM chunk.
+        
+        480 samples at 24000Hz = 20ms of smooth linear decay to zero.
+        """
+        if len(pcm) < fade_samples * 2:
+            fade_samples = len(pcm) // 2
+        if fade_samples <= 0:
+            return pcm
+
+        arr = array.array('h', pcm)
+        total_samples = len(arr)
+
+        for i in range(fade_samples):
+            idx = total_samples - fade_samples + i
+            factor = (fade_samples - i - 1) / fade_samples
+            arr[idx] = int(arr[idx] * factor)
+
+        return arr.tobytes()
+
     async def _synthesize_and_stream(self, session: aiohttp.ClientSession, text: str) -> None:
         log.info("TTS Synthesis ← %r", text)
         url = f"https://api.deepgram.com/v1/speak?model={self._cfg.tts.model}&encoding=linear16&sample_rate=24000"
@@ -352,12 +373,21 @@ class TTSWorker:
                 log.error("Deepgram TTS returned non-200 state: %d", response.status)
                 return
 
-            # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
+            # Zero-Click streaming: Hold the last chunk of the sentence and fade it out
+            # before writing to the sound card to eliminate the DC offset 'pop' or 'tick'.
+            last_chunk = None
             async for chunk, _ in response.content.iter_chunks():
                 if self._output._abort_playback.is_set():
                     log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
                     break
-                self._output.write(chunk)
+                if last_chunk is not None:
+                    self._output.write(last_chunk)
+                last_chunk = chunk
+
+            # Apply smooth linear fade-out on the final chunk of the sentence
+            if last_chunk is not None and not self._output._abort_playback.is_set():
+                faded_chunk = self._apply_fade_out(last_chunk)
+                self._output.write(faded_chunk)
 
 
 # ---------------------------------------------------------------------------
