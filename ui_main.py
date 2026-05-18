@@ -68,7 +68,7 @@ class PipelineRunner(QThread):
             with managed_output_router(cfg.audio) as out_router:
                 pipeline = VoicePipeline(cfg, out_router)
                 self.pipeline = pipeline  # expose for UI intercept calls
-                with managed_input_router(cfg.audio, pipeline.audio_queue, self.loop) as _in_router:
+                with managed_input_router(cfg.audio, pipeline.audio_queue, self.loop, out_router) as _in_router:
                     await pipeline.start()
                     self.log_signal.emit("Pipeline live! Listening for audio...")
                     

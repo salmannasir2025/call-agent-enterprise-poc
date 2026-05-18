@@ -77,10 +77,12 @@ class AudioInputRouter:
         cfg: AudioConfig,
         queue: AudioQueue,
         loop: asyncio.AbstractEventLoop,
+        output_router: Optional[AudioOutputRouter] = None,
     ) -> None:
         self._cfg = cfg
         self._queue = queue
         self._loop = loop
+        self._output_router = output_router
         self._stream: Optional[sd.RawInputStream] = None
         self._active = threading.Event()
 
@@ -90,9 +92,30 @@ class AudioInputRouter:
         except asyncio.QueueFull:
             pass  # Silently drop raw audio frames if STT is dead or lagging
 
+    def _safe_put_sentinel(self) -> None:
+        try:
+            self._queue.put_nowait(None)
+        except asyncio.QueueFull:
+            # If queue is full on shutdown, clear one slot and insert sentinel
+            if not self._queue.empty():
+                try:
+                    self._queue.get_nowait()
+                except Exception:
+                    pass
+            try:
+                self._queue.put_nowait(None)
+            except asyncio.QueueFull:
+                pass
+
     def _callback(self, indata, frames, time, status):
         if status:
             log.warning("Input stream status: %s", status)
+        
+        # Self-hearing turn suppression (Acoustic Echo Cancellation)
+        # Drop mic audio if the AI is actively speaking/writing TTS audio
+        if self._output_router and self._output_router.is_playing.is_set():
+            return
+
         if indata and self._active.is_set():
             chunk = bytes(indata)
             self._loop.call_soon_threadsafe(self._safe_put, chunk)
@@ -126,7 +149,7 @@ class AudioInputRouter:
             self._stream = None
         # Push sentinel so downstream consumers can exit cleanly
         try:
-            self._loop.call_soon_threadsafe(self._queue.put_nowait, None)
+            self._loop.call_soon_threadsafe(self._safe_put_sentinel)
         except RuntimeError:
             pass  # event loop already closed
         log.info("AudioInputRouter stopped.")
@@ -149,6 +172,7 @@ class AudioOutputRouter:
         self._cfg = cfg
         self._stream: Optional[sd.RawOutputStream] = None
         self._abort_playback = threading.Event()  # Set = muted, Clear = active
+        self.is_playing = threading.Event()       # NEW: Set = actively playing, Clear = silent
 
     def start(self) -> None:
         self._abort_playback.clear()
@@ -218,8 +242,9 @@ def managed_input_router(
     cfg: AudioConfig,
     queue: AudioQueue,
     loop: asyncio.AbstractEventLoop,
+    output_router: Optional[AudioOutputRouter] = None,
 ) -> Generator[AudioInputRouter, None, None]:
-    router = AudioInputRouter(cfg, queue, loop)
+    router = AudioInputRouter(cfg, queue, loop, output_router)
     try:
         router.start()
         yield router

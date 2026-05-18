@@ -293,24 +293,50 @@ class TTSWorker:
         
         # Open a single shared connection context for the life of the pipeline
         async with aiohttp.ClientSession() as session:
+            buffer = ""
             while True:
                 text = await self._tts_text_q.get()
-                if text is _SHUTDOWN or text is None:
+                if text is _SHUTDOWN:
                     self._tts_text_q.task_done()
+                    # Flush remaining buffer
+                    if buffer.strip():
+                        try:
+                            await self._synthesize_and_stream(session, buffer.strip())
+                        except Exception as exc:
+                            log.error("TTS Synthesis execution dropped on shutdown: %s", exc)
                     break
 
-                clean_text = text.strip()
-                if clean_text:
-                    try:
-                        # Feed the warm pooled connection directly to the stream execution
-                        await self._synthesize_and_stream(session, clean_text)
-                    except Exception as exc:
-                        log.error("TTS Synthesis execution dropped: %s", exc)
+                if text is None:
+                    self._tts_text_q.task_done()
+                    continue
+
+                buffer += text
                 self._tts_text_q.task_done()
+
+                # Low-latency sentence boundary splitting
+                if any(p in text for p in (".", "?", "!", "\n")):
+                    sentences = []
+                    current = ""
+                    for char in buffer:
+                        current += char
+                        if char in (".", "?", "!", "\n"):
+                            sentences.append(current)
+                            current = ""
+                    
+                    buffer = current
+                    
+                    for sentence in sentences:
+                        clean_sentence = sentence.strip()
+                        if clean_sentence:
+                            try:
+                                await self._synthesize_and_stream(session, clean_sentence)
+                            except Exception as exc:
+                                log.error("TTS Synthesis execution dropped: %s", exc)
 
         log.info("TTSWorker: Session pool successfully drained and terminated.")
 
     async def _synthesize_and_stream(self, session: aiohttp.ClientSession, text: str) -> None:
+        log.info("TTS Synthesis ← %r", text)
         url = f"https://api.deepgram.com/v1/speak?model={self._cfg.tts.model}&encoding=linear16&sample_rate=24000"
         headers = {
             "Authorization": f"Token {self._cfg.keys.deepgram}",
@@ -318,17 +344,28 @@ class TTSWorker:
         }
         payload = {"text": text}
 
-        async with session.post(url, headers=headers, json=payload) as response:
-            if response.status != 200:
-                log.error("Deepgram TTS returned non-200 state: %d", response.status)
-                return
+        # Echo Cancellation: Signal that AI is actively speaking
+        self._output.is_playing.set()
 
-            # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
-            async for chunk, _ in response.content.iter_chunks():
-                if self._output._abort_playback.is_set():
-                    log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
-                    break
-                self._output.write(chunk)
+        try:
+            async with session.post(url, headers=headers, json=payload) as response:
+                if response.status != 200:
+                    log.error("Deepgram TTS returned non-200 state: %d", response.status)
+                    return
+
+                # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
+                async for chunk, _ in response.content.iter_chunks():
+                    if self._output._abort_playback.is_set():
+                        log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
+                        break
+                    self._output.write(chunk)
+        finally:
+            # Echo Cancellation: Clear the playing flag after buffer drains (400ms padding)
+            asyncio.create_task(self._clear_playing_flag_delayed())
+
+    async def _clear_playing_flag_delayed(self) -> None:
+        await asyncio.sleep(0.4)
+        self._output.is_playing.clear()
 
 
 # ---------------------------------------------------------------------------
