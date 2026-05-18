@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import threading
+import time
 from contextlib import contextmanager
 from typing import Final, Generator, Optional
 
@@ -112,8 +113,7 @@ class AudioInputRouter:
             log.warning("Input stream status: %s", status)
         
         # Self-hearing turn suppression (Acoustic Echo Cancellation)
-        # Drop mic audio if the AI is actively speaking/writing TTS audio
-        if self._output_router and self._output_router.is_playing.is_set():
+        if self._output_router and self._output_router.is_playing:
             return
 
         if indata and self._active.is_set():
@@ -172,10 +172,11 @@ class AudioOutputRouter:
         self._cfg = cfg
         self._stream: Optional[sd.RawOutputStream] = None
         self._abort_playback = threading.Event()  # Set = muted, Clear = active
-        self.is_playing = threading.Event()       # NEW: Set = actively playing, Clear = silent
+        self._playback_end_time = 0.0             # Dynamically tracks exact play end
 
     def start(self) -> None:
         self._abort_playback.clear()
+        self._playback_end_time = 0.0
         device_index = resolve_device_index(self._cfg.output_device_index, "output")
         self._stream = sd.RawOutputStream(
             samplerate=self._cfg.output_sample_rate,
@@ -197,6 +198,15 @@ class AudioOutputRouter:
             return  # Interrupt active — discard audio
         if self._stream is not None and pcm:
             try:
+                # Calculate bytes per second: linear16 = 2 bytes per sample per channel
+                bytes_per_sample = 2
+                bytes_per_sec = self._cfg.output_sample_rate * bytes_per_sample * self._cfg.output_channels
+                duration = len(pcm) / bytes_per_sec
+                
+                # Predict play finish time
+                now = time.time()
+                self._playback_end_time = max(self._playback_end_time, now) + duration
+                
                 self._stream.write(pcm)
             except Exception as exc:
                 log.error("Audio write error: %s", exc)
@@ -209,6 +219,7 @@ class AudioOutputRouter:
         sounddevice internal buffer before this call.
         """
         self._abort_playback.set()
+        self._playback_end_time = 0.0  # Clear predicted play time instantly
         if self._stream is not None:
             try:
                 self._stream.stop()   # Discards buffered audio
@@ -220,7 +231,14 @@ class AudioOutputRouter:
     def reset_interrupt(self) -> None:
         """Re-enables PCM writes after a hot interrupt."""
         self._abort_playback.clear()
+        self._playback_end_time = 0.0
         log.info("AudioOutputRouter: playback re-enabled.")
+
+    @property
+    def is_playing(self) -> bool:
+        """Return True if hardware sound device is actively playing written buffer."""
+        # 300ms hardware/driver flush buffer padding
+        return time.time() < self._playback_end_time + 0.3
 
     def stop(self) -> None:
         self._abort_playback.set()  # Prevent writes during teardown

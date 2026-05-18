@@ -233,7 +233,10 @@ class LLMWorker:
             response = self._chat.send_message(user_text, stream=True)
             chunks: list[str] = []
             for chunk in response:
-                text = chunk.text if hasattr(chunk, "text") else ""
+                try:
+                    text = chunk.text
+                except Exception:
+                    text = ""
                 if text:
                     chunks.append(text)
             return chunks
@@ -344,28 +347,17 @@ class TTSWorker:
         }
         payload = {"text": text}
 
-        # Echo Cancellation: Signal that AI is actively speaking
-        self._output.is_playing.set()
+        async with session.post(url, headers=headers, json=payload) as response:
+            if response.status != 200:
+                log.error("Deepgram TTS returned non-200 state: %d", response.status)
+                return
 
-        try:
-            async with session.post(url, headers=headers, json=payload) as response:
-                if response.status != 200:
-                    log.error("Deepgram TTS returned non-200 state: %d", response.status)
-                    return
-
-                # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
-                async for chunk, _ in response.content.iter_chunks():
-                    if self._output._abort_playback.is_set():
-                        log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
-                        break
-                    self._output.write(chunk)
-        finally:
-            # Echo Cancellation: Clear the playing flag after buffer drains (400ms padding)
-            asyncio.create_task(self._clear_playing_flag_delayed())
-
-    async def _clear_playing_flag_delayed(self) -> None:
-        await asyncio.sleep(0.4)
-        self._output.is_playing.clear()
+            # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
+            async for chunk, _ in response.content.iter_chunks():
+                if self._output._abort_playback.is_set():
+                    log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
+                    break
+                self._output.write(chunk)
 
 
 # ---------------------------------------------------------------------------
