@@ -317,15 +317,22 @@ class TTSWorker:
                 buffer += text
                 self._tts_text_q.task_done()
 
-                # Low-latency sentence boundary splitting
-                if any(p in text for p in (".", "?", "!", "\n")):
+                # Low-latency clause and sentence boundary splitting
+                if any(p in text for p in (".", "?", "!", "\n", ",", ";", ":")):
                     sentences = []
                     current = ""
                     for char in buffer:
                         current += char
+                        # Direct sentence breaks
                         if char in (".", "?", "!", "\n"):
                             sentences.append(current)
                             current = ""
+                        # Clause breaks (comma, semicolon, colon) — only split if we have accumulated enough words (>=5) to keep it smooth
+                        elif char in (",", ";", ":"):
+                            words = current.strip().split()
+                            if len(words) >= 5:
+                                sentences.append(current)
+                                current = ""
                     
                     buffer = current
                     
@@ -368,26 +375,43 @@ class TTSWorker:
         }
         payload = {"text": text}
 
-        async with session.post(url, headers=headers, json=payload) as response:
-            if response.status != 200:
-                log.error("Deepgram TTS returned non-200 state: %d", response.status)
-                return
+        # Auto-retry loop to handle connection dropouts / idle connection timeouts
+        for attempt in range(2):
+            try:
+                async with session.post(url, headers=headers, json=payload) as response:
+                    if response.status != 200:
+                        log.error("Deepgram TTS returned non-200 state: %d", response.status)
+                        return
 
-            # Zero-Click streaming: Hold the last chunk of the sentence and fade it out
-            # before writing to the sound card to eliminate the DC offset 'pop' or 'tick'.
-            last_chunk = None
-            async for chunk, _ in response.content.iter_chunks():
-                if self._output._abort_playback.is_set():
-                    log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
-                    break
-                if last_chunk is not None:
-                    self._output.write(last_chunk)
-                last_chunk = chunk
+                    # Zero-Click streaming: Hold the last chunk of the sentence and fade it out
+                    # before writing to the sound card to eliminate the DC offset 'pop' or 'tick'.
+                    last_chunk = None
+                    async for chunk, _ in response.content.iter_chunks():
+                        if self._output._abort_playback.is_set():
+                            log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
+                            break
+                        if last_chunk is not None:
+                            self._output.write(last_chunk)
+                        last_chunk = chunk
 
-            # Apply smooth linear fade-out on the final chunk of the sentence
-            if last_chunk is not None and not self._output._abort_playback.is_set():
-                faded_chunk = self._apply_fade_out(last_chunk)
-                self._output.write(faded_chunk)
+                    # Apply smooth linear fade-out on the final chunk of the sentence
+                    if last_chunk is not None and not self._output._abort_playback.is_set():
+                        faded_chunk = self._apply_fade_out(last_chunk)
+                        self._output.write(faded_chunk)
+                        
+                        # Append 100ms of absolute silence (zeros) to let hardware sound card buffers
+                        # fully settle to zero state and prevent ALSA/PulseAudio suspension clicks
+                        silence_samples = 2400  # 100ms at 24000Hz
+                        silence_bytes = b'\x00' * (silence_samples * 2)  # linear16 = 2 bytes/sample
+                        self._output.write(silence_bytes)
+                return  # Success
+            except (aiohttp.ClientError, asyncio.TimeoutError) as exc:
+                if attempt == 0:
+                    log.warning("Deepgram TTS connection lost on idle pool. Retrying with a fresh request: %s", exc)
+                    await asyncio.sleep(0.1)
+                else:
+                    log.error("Deepgram TTS connection fatally dropped after retry: %s", exc)
+                    raise
 
 
 # ---------------------------------------------------------------------------
