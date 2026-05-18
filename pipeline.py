@@ -271,13 +271,9 @@ class LLMWorker:
 # ---------------------------------------------------------------------------
 class TTSWorker:
     """
-    Consumes text chunks from `tts_text_queue`, accumulates into sentence
-    boundaries, fires Deepgram TTS streaming requests, and writes PCM to
-    the AudioOutputRouter.
+    Consumes text chunks from `tts_text_queue`, synthesizes PCM audio 
+    via Deepgram Speak API using a single, warmed, persistent session connection.
     """
-
-    _TTS_ENDPOINT: Final[str] = "https://api.deepgram.com/v1/speak"
-
     def __init__(
         self,
         cfg: Config,
@@ -287,75 +283,48 @@ class TTSWorker:
         self._cfg = cfg
         self._tts_text_q = tts_text_queue
         self._output = output_router
-        self._headers = {
-            "Authorization": f"Token {cfg.keys.deepgram}",
-            "Content-Type": "application/json",
-        }
-        self._params = {
-            "model": cfg.tts.model,
-            "encoding": cfg.tts.encoding,
-            "sample_rate": cfg.tts.sample_rate,
-            "container": cfg.tts.container,
-        }
 
     async def run(self) -> None:
-        log.info("TTSWorker starting…")
-        ssl_ctx = ssl.create_default_context()
-        connector = aiohttp.TCPConnector(ssl=ssl_ctx, limit=4)
-
-        async with aiohttp.ClientSession(
-            connector=connector,
-            headers=self._headers,
-        ) as session:
-            buffer = ""
-            try:
-                while True:
-                    chunk = await self._tts_text_q.get()
-                    if chunk is _SHUTDOWN:
-                        log.info("TTSWorker received shutdown sentinel.")
-                        # Flush remaining buffer
-                        if buffer.strip():
-                            await self._synthesize(session, buffer.strip())
-                        break
-
-                    buffer += chunk
+        log.info("TTSWorker: Initializing persistent HTTP session pool...")
+        
+        # Open a single shared connection context for the life of the pipeline
+        async with aiohttp.ClientSession() as session:
+            while True:
+                text = await self._tts_text_q.get()
+                if text is _SHUTDOWN or text is None:
                     self._tts_text_q.task_done()
+                    break
 
-                    # Flush on natural sentence boundaries for low latency
-                    if chunk == "\n" and buffer.strip():
-                        await self._synthesize(session, buffer.strip())
-                        buffer = ""
+                clean_text = text.strip()
+                if clean_text:
+                    try:
+                        # Feed the warm pooled connection directly to the stream execution
+                        await self._synthesize_and_stream(session, clean_text)
+                    except Exception as exc:
+                        log.error("TTS Synthesis execution dropped: %s", exc)
+                self._tts_text_q.task_done()
 
-            except Exception as exc:
-                log.exception("TTSWorker fatal error: %s", exc)
-            finally:
-                log.info("TTSWorker stopped.")
+        log.info("TTSWorker: Session pool successfully drained and terminated.")
 
-    async def _synthesize(self, session: aiohttp.ClientSession, text: str) -> None:
-        """POST text to Deepgram TTS and stream PCM chunks to output router."""
-        log.info("TTS ← %r", text[:80])
-        payload = json.dumps({"text": text})
-        try:
-            async with session.post(
-                self._TTS_ENDPOINT,
-                data=payload,
-                params=self._params,
-                timeout=aiohttp.ClientTimeout(total=30),
-            ) as resp:
-                if resp.status != 200:
-                    body = await resp.text()
-                    log.error("TTS HTTP %d: %s", resp.status, body)
-                    return
+    async def _synthesize_and_stream(self, session: aiohttp.ClientSession, text: str) -> None:
+        url = f"https://api.deepgram.com/v1/speak?model={self._cfg.tts.model}&encoding=linear16&sample_rate=24000"
+        headers = {
+            "Authorization": f"Token {self._cfg.keys.deepgram}",
+            "Content-Type": "application/json",
+        }
+        payload = {"text": text}
 
-                chunk_size = self._cfg.audio.output_chunk_frames * 2  # 16-bit = 2 bytes
-                async for pcm in resp.content.iter_chunked(chunk_size):
-                    if pcm:
-                        self._output.write(bytes(pcm))
+        async with session.post(url, headers=headers, json=payload) as response:
+            if response.status != 200:
+                log.error("Deepgram TTS returned non-200 state: %d", response.status)
+                return
 
-        except aiohttp.ClientError as exc:
-            log.error("TTS request failed: %s", exc)
-        except asyncio.TimeoutError:
-            log.error("TTS request timed out.")
+            # Push incoming streaming audio chunks straight to hardware with zero disk-write lag
+            async for chunk, _ in response.content.iter_chunks():
+                if self._output._abort_playback.is_set():
+                    log.info("Hot Interrupt detected: Aborting downstream audio playback loop.")
+                    break
+                self._output.write(chunk)
 
 
 # ---------------------------------------------------------------------------

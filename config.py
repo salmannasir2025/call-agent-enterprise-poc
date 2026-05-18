@@ -78,12 +78,14 @@ class AudioConfig:
 # ---------------------------------------------------------------------------
 @dataclass(frozen=True, slots=True)
 class STTConfig:
-    model: str            = "flux-general-en"  # Ultra-low-latency turn-detection STT
+    model: str            = "flux-general-en"  # Low-latency live turn tracking target
     language: str         = "en-US"
     punctuate: bool       = True
     interim_results: bool = True
     endpointing: int      = 300          # ms of silence before utterance_end
     utterance_end_ms: int = 1_000
+    sample_rate: int      = 48000
+    channels: int         = 1
 
 
 # ---------------------------------------------------------------------------
@@ -91,9 +93,9 @@ class STTConfig:
 # ---------------------------------------------------------------------------
 @dataclass(frozen=True, slots=True)
 class TTSConfig:
-    model: str       = "aura-2-odysseus-en"  # Smooth, professional male voice
+    model: str       = "aura-2-odysseus-en"  # Your optimized male voice profile
     encoding: str    = "linear16"
-    sample_rate: int = 24_000
+    sample_rate: int = 24000
     container: str   = "none"               # raw PCM — no WAV header overhead
 
 
