@@ -78,7 +78,7 @@ class AudioConfig:
 # ---------------------------------------------------------------------------
 @dataclass(frozen=True, slots=True)
 class STTConfig:
-    model: str            = "flux-general-en"  # Low-latency live turn tracking target
+    model: str            = "nova-2"  # Low-latency live turn tracking target
     language: str         = "en-US"
     punctuate: bool       = True
     interim_results: bool = True
