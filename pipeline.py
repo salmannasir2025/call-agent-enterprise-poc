@@ -126,7 +126,7 @@ class STTWorker:
     # ------------------------------------------------------------------
     # Deepgram event handlers
     # ------------------------------------------------------------------
-    def _on_transcript(self, *args, **kwargs) -> None:
+    async def _on_transcript(self, *args, **kwargs) -> None:
         result = kwargs.get("result") or (args[1] if len(args) > 1 else None)
         if result is None:
             return
@@ -145,7 +145,7 @@ class STTWorker:
         except (AttributeError, IndexError) as exc:
             log.warning("Malformed transcript result: %s", exc)
 
-    def _on_error(self, *args, **kwargs) -> None:
+    async def _on_error(self, *args, **kwargs) -> None:
         error = kwargs.get("error") or (args[1] if len(args) > 1 else None)
         log.error("Deepgram STT error event: %s", error)
 
