@@ -1,0 +1,38 @@
+# Sensitive runtime secrets — NEVER commit these
+.env
+*.env
+.env.*
+!.env.example
+
+# Python bytecache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyzw
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Session, memory, and internal documentation — internal use only
+SESSION_NOTES.md
+walkthrough.md
+output/
+
+# IDE and OS artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+*.whl

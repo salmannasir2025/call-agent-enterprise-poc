@@ -1,0 +1,13 @@
+# call-agent — Real-time Voice-to-Voice Pipeline
+# Python 3.11+
+
+# Core async / audio
+pyaudio>=0.2.14
+sounddevice>=0.4.6
+aiohttp>=3.9.0
+
+# STT & TTS — Deepgram
+deepgram-sdk>=3.5.0
+
+# LLM — Google Gemini
+google-generativeai>=0.8.0
