@@ -6,6 +6,34 @@ This repository houses an **Enterprise Proof of Concept Working Model** develope
 
 This software serves as a showcase of our technical proficiency in engineering production-grade AI solutions for businesses. It is engineered to handle fast-paced conversational AI tasks, simulating real-world sales and discovery workflows without the lag typically associated with cloud-dependent wrappers.
 
+---
+
+## 📊 Architectural Workflow
+
+The system utilizes an asynchronous orchestration layer to decouple speech interfaces from the cognitive LLM pipeline, guaranteeing extreme efficiency and instant conversational responses.
+
+```mermaid
+graph TD
+    A[PyQt6 UI Panel] -->|Operator Params & Control Signal| B(Voice Orchestration Engine)
+    B -->|Asynchronous Event Loop| C(Live Microphone Input)
+    C -->|PortAudio Recording Buffer| D[Deepgram WebSocket STT]
+    D -->|Real-Time Transcribed Text| C
+    C -->|Interpreted Speech Transcript| E(Gemini Flash LLM Engine)
+    E -->|Context-Constrained Prompting| F(Deepgram REST Aura TTS)
+    F -->|Professional Streamed Audio Packets| G(Audio Output Queue)
+    G -->|Continuous Playback Thread| H[Speaker Playback Router]
+    H -->|Immediate Vocal Output| I[Prospect Voice Channel]
+    I -->|Audio Hot-Interrupt Trigger| J[PortAudio Interceptor]
+    J -->|Instantly Clears Queues & Mutes Playback| B
+    
+    style A fill:#4D96FF,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#FF8E53,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#FF6B6B,stroke:#333,stroke-width:2px,color:#fff
+    style J fill:#00FF66,stroke:#333,stroke-width:2px,color:#000
+```
+
+---
+
 ## Core Capabilities Highlighted
 
 *   **Asynchronous Orchestration:** The pipeline utilizes advanced Python `asyncio` threading boundaries. Audio capture, Large Language Model (LLM) processing, and Text-to-Speech (TTS) generation operate in fully decoupled, non-blocking loops to ensure zero stutter during operation.
