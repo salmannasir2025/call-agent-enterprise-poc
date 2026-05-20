@@ -66,3 +66,13 @@ ABT Plus LLC specializes in high-performance private AI automation pipelines, mu
 This repository is an open-source architectural Proof of Concept (PoC) engineered strictly for technical study, local environment evaluation, and middleware infrastructure orchestration sandbox testing.
 * **Liability:** The software is provided "as is", without warranty of any kind. ABT PLUS LLC assumes zero liability or financial tracing responsibility for API token configurations, webhook connection bills, or third-party telephony accounts (e.g., Twilio) linked to this open-source framework.
 * **Compliance:** Users bear sole individual responsibility for ensuring automated telephony streams and voice-cloning testing conform to regional carrier standards, telecom regulations, and platform Terms of Service.
+
+---
+
+## 📬 Contact & Corporate Information
+| | |
+| --- | --- |
+| **Organization** | ABT PLUS LLC (Automated Business Technologies) |
+| **Website** | [www.abtplusllc.com](https://www.abtplusllc.com) |
+| **Support** | [support@abtplusllc.com](mailto:support@abtplusllc.com) |
+| **License** | MIT — Open Source |
