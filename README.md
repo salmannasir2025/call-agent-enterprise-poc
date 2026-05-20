@@ -62,8 +62,11 @@ ABT Plus LLC specializes in high-performance private AI automation pipelines, mu
 
 ---
 
-## License & Usage
+## ⚖️ Open-Source Licensing & Operational Boundary
 
-This project is released under a modified MIT License.
+This repository is open-sourced under the terms of the standard **MIT License**. It is an architectural Proof of Concept (PoC) engineered strictly for technical study, local environment evaluation, and middleware infrastructure orchestration sandbox testing.
 
-**COMMERCIAL USE RESTRICTION:** This software is provided for evaluation and non-commercial purposes. Any integration into a paid product, deployment in a revenue-generating environment, or use on behalf of a paying client requires the explicit prior written permission of ABT Plus LLC. See the `LICENSE` file for full terms.
+* **Developer & Corporate Immunity:** This software is provided "as is", without warranty of any kind. ABT PLUS LLC (Automated Business Technologies) assumes zero operational liability or financial tracking responsibility for third-party API token configurations, webhook connection bills, or external telephony infrastructure linked to this open-source framework.
+* **Compliance Boundary:** Users bear sole individual responsibility for ensuring that automated speech streams, turn-detection matrices, and voice processing loops conform to regional telecommunication regulations, data carrier standards, and target platform terms of service.
+* **Custom Enterprise Deployments:** For production-grade implementations, dedicated corporate integration, or bespoke enterprise multi-agent workflows, please connect directly with our engineering team via our primary corporate channel.
+
