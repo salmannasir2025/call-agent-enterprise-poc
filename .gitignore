@@ -49,3 +49,5 @@ ENV/
 __pycache__/
 *.pyc
 *.pyo
+secrets.*
+.wdm/

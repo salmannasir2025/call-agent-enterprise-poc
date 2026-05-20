@@ -62,10 +62,10 @@ ABT Plus LLC specializes in high-performance private AI automation pipelines, mu
 
 ---
 
-## ⚖️ Open-Source Disclaimer & Operational Boundary
-This repository is an open-source architectural Proof of Concept (PoC) engineered strictly for technical study, local environment evaluation, and middleware infrastructure orchestration sandbox testing.
-* **Liability:** The software is provided "as is", without warranty of any kind. ABT PLUS LLC assumes zero liability or financial tracing responsibility for API token configurations, webhook connection bills, or third-party telephony accounts (e.g., Twilio) linked to this open-source framework.
-* **Compliance:** Users bear sole individual responsibility for ensuring automated telephony streams and voice-cloning testing conform to regional carrier standards, telecom regulations, and platform Terms of Service.
+## ⚖️ Open-Source Academic Licensing & Disclaimer
+This project is open-sourced under the terms of the standard **MIT License**. It is an architectural Proof of Concept (PoC) engineered strictly for local environment evaluation, educational research, and technical sandbox testing.
+* **Operational Immunity:** This software is provided "as is", without warranty of any kind. ABT PLUS LLC (Automated Business Technologies) assumes zero liability, tracking obligation, or financial tracing responsibility for how third-party actors configure, clone, or deploy this script framework.
+* **Compliance Boundary:** Users bear sole individual responsibility for ensuring that all data extraction loops, automation streams, or third-party API keys (e.g., Twilio, Deepgram, Gemini) linked to this code comply with regional laws (GDPR, CCPA), telecom carrier standards, and target infrastructure Terms of Service (ToS).
 
 ---
 
