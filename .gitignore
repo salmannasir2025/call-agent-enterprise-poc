@@ -36,3 +36,16 @@ Thumbs.db
 dist/
 build/
 *.whl
+
+# --- Compliance Security Sweep Patterns ---
+.env
+*.env
+.env.*
+config.json
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo

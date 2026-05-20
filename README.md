@@ -62,11 +62,7 @@ ABT Plus LLC specializes in high-performance private AI automation pipelines, mu
 
 ---
 
-## ⚖️ Open-Source Licensing & Operational Boundary
-
-This repository is open-sourced under the terms of the standard **MIT License**. It is an architectural Proof of Concept (PoC) engineered strictly for technical study, local environment evaluation, and middleware infrastructure orchestration sandbox testing.
-
-* **Developer & Corporate Immunity:** This software is provided "as is", without warranty of any kind. ABT PLUS LLC (Automated Business Technologies) assumes zero operational liability or financial tracking responsibility for third-party API token configurations, webhook connection bills, or external telephony infrastructure linked to this open-source framework.
-* **Compliance Boundary:** Users bear sole individual responsibility for ensuring that automated speech streams, turn-detection matrices, and voice processing loops conform to regional telecommunication regulations, data carrier standards, and target platform terms of service.
-* **Custom Enterprise Deployments:** For production-grade implementations, dedicated corporate integration, or bespoke enterprise multi-agent workflows, please connect directly with our engineering team via our primary corporate channel.
-
+## ⚖️ Open-Source Disclaimer & Operational Boundary
+This repository is an open-source architectural Proof of Concept (PoC) engineered strictly for technical study, local environment evaluation, and middleware infrastructure orchestration sandbox testing.
+* **Liability:** The software is provided "as is", without warranty of any kind. ABT PLUS LLC assumes zero liability or financial tracing responsibility for API token configurations, webhook connection bills, or third-party telephony accounts (e.g., Twilio) linked to this open-source framework.
+* **Compliance:** Users bear sole individual responsibility for ensuring automated telephony streams and voice-cloning testing conform to regional carrier standards, telecom regulations, and platform Terms of Service.
