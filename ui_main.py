@@ -177,7 +177,8 @@ class CallAgentUI(QMainWindow):
         # Company Logo
         self.logo_label = QLabel()
         self.logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        logo_path = "/home/salman/Documents/projects/website/logos/logo1.png"
+        import os
+        logo_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "website/logos/logo1.png")
         if os.path.exists(logo_path):
             pixmap = QPixmap(logo_path)
             # Scale logo to reasonable size, keeping aspect ratio

@@ -1,0 +1,3948 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "audio_router.py",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L1",
+      "id": "audio_router",
+      "community": 0,
+      "norm_label": "audio_router.py"
+    },
+    {
+      "label": "list_audio_devices()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L30",
+      "id": "audio_router_list_audio_devices",
+      "community": 0,
+      "norm_label": "list_audio_devices()"
+    },
+    {
+      "label": "resolve_device_index()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L45",
+      "id": "audio_router_resolve_device_index",
+      "community": 0,
+      "norm_label": "resolve_device_index()"
+    },
+    {
+      "label": "AudioInputRouter",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L71",
+      "id": "audio_router_audioinputrouter",
+      "community": 3,
+      "norm_label": "audioinputrouter"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "id": "audio_router_audioinputrouter_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "AudioConfig",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "id": "audioconfig",
+      "community": 3,
+      "norm_label": "audioconfig"
+    },
+    {
+      "label": "AudioQueue",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "id": "audio_router_py_audioqueue",
+      "community": 8,
+      "norm_label": "audioqueue"
+    },
+    {
+      "label": "AbstractEventLoop",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "id": "abstracteventloop",
+      "community": 3,
+      "norm_label": "abstracteventloop"
+    },
+    {
+      "label": "AudioOutputRouter",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "id": "audio_router_py_audiooutputrouter",
+      "community": 3,
+      "norm_label": "audiooutputrouter"
+    },
+    {
+      "label": "._safe_put()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L90",
+      "id": "audio_router_audioinputrouter_safe_put",
+      "community": 3,
+      "norm_label": "._safe_put()"
+    },
+    {
+      "label": "._safe_put_sentinel()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L96",
+      "id": "audio_router_audioinputrouter_safe_put_sentinel",
+      "community": 3,
+      "norm_label": "._safe_put_sentinel()"
+    },
+    {
+      "label": "._callback()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L111",
+      "id": "audio_router_audioinputrouter_callback",
+      "community": 3,
+      "norm_label": "._callback()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L123",
+      "id": "audio_router_audioinputrouter_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L141",
+      "id": "audio_router_audioinputrouter_stop",
+      "community": 3,
+      "norm_label": ".stop()"
+    },
+    {
+      "label": "AudioOutputRouter",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L161",
+      "id": "audio_router_audiooutputrouter",
+      "community": 7,
+      "norm_label": "audiooutputrouter"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L171",
+      "id": "audio_router_audiooutputrouter_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L177",
+      "id": "audio_router_audiooutputrouter_start",
+      "community": 0,
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".write()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L195",
+      "id": "audio_router_audiooutputrouter_write",
+      "community": 7,
+      "norm_label": ".write()"
+    },
+    {
+      "label": ".trigger_interrupt()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L214",
+      "id": "audio_router_audiooutputrouter_trigger_interrupt",
+      "community": 0,
+      "norm_label": ".trigger_interrupt()"
+    },
+    {
+      "label": ".reset_interrupt()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L231",
+      "id": "audio_router_audiooutputrouter_reset_interrupt",
+      "community": 7,
+      "norm_label": ".reset_interrupt()"
+    },
+    {
+      "label": ".is_playing()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L238",
+      "id": "audio_router_audiooutputrouter_is_playing",
+      "community": 7,
+      "norm_label": ".is_playing()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L243",
+      "id": "audio_router_audiooutputrouter_stop",
+      "community": 0,
+      "norm_label": ".stop()"
+    },
+    {
+      "label": "managed_input_router()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "id": "audio_router_managed_input_router",
+      "community": 0,
+      "norm_label": "managed_input_router()"
+    },
+    {
+      "label": "managed_output_router()",
+      "file_type": "code",
+      "source_file": "audio_router.py",
+      "source_location": "L274",
+      "id": "audio_router_managed_output_router",
+      "community": 0,
+      "norm_label": "managed_output_router()"
+    },
+    {
+      "label": "audio_router.py \u2014 Sounddevice stream initialization, buffer handling,",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L1",
+      "id": "audio_router_rationale_1",
+      "community": 0,
+      "norm_label": "audio_router.py \u2014 sounddevice stream initialization, buffer handling,"
+    },
+    {
+      "label": "Log all available Sounddevice host devices for debugging / device mapping.",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L31",
+      "id": "audio_router_rationale_31",
+      "community": 0,
+      "norm_label": "log all available sounddevice host devices for debugging / device mapping."
+    },
+    {
+      "label": "Return the device index to pass to Sounddevice.     -1 sentinel \u2192 None (use syst",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L49",
+      "id": "audio_router_rationale_49",
+      "community": 0,
+      "norm_label": "return the device index to pass to sounddevice.     -1 sentinel \u2192 none (use syst"
+    },
+    {
+      "label": "Opens a Sounddevice input stream and feeds raw PCM chunks into an asyncio Queue.",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L72",
+      "id": "audio_router_rationale_72",
+      "community": 3,
+      "norm_label": "opens a sounddevice input stream and feeds raw pcm chunks into an asyncio queue."
+    },
+    {
+      "label": "Reads raw PCM bytes from an asyncio Queue and writes them to a Sounddevice     o",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L162",
+      "id": "audio_router_rationale_162",
+      "community": 7,
+      "norm_label": "reads raw pcm bytes from an asyncio queue and writes them to a sounddevice     o"
+    },
+    {
+      "label": "Write PCM chunk \u2014 silently dropped if abort flag is set.",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L196",
+      "id": "audio_router_rationale_196",
+      "community": 7,
+      "norm_label": "write pcm chunk \u2014 silently dropped if abort flag is set."
+    },
+    {
+      "label": "Instantly mutes AI audio and flushes the hardware ring buffer.          Sets the",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L215",
+      "id": "audio_router_rationale_215",
+      "community": 0,
+      "norm_label": "instantly mutes ai audio and flushes the hardware ring buffer.          sets the"
+    },
+    {
+      "label": "Re-enables PCM writes after a hot interrupt.",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L232",
+      "id": "audio_router_rationale_232",
+      "community": 7,
+      "norm_label": "re-enables pcm writes after a hot interrupt."
+    },
+    {
+      "label": "Return True if hardware sound device is actively playing written buffer.",
+      "file_type": "rationale",
+      "source_file": "audio_router.py",
+      "source_location": "L239",
+      "id": "audio_router_rationale_239",
+      "community": 7,
+      "norm_label": "return true if hardware sound device is actively playing written buffer."
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "id": "config_py_config",
+      "community": 4,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "_require()",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L29",
+      "id": "config_require",
+      "community": 4,
+      "norm_label": "_require()"
+    },
+    {
+      "label": "_optional()",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L38",
+      "id": "config_optional",
+      "community": 4,
+      "norm_label": "_optional()"
+    },
+    {
+      "label": "APIKeys",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L46",
+      "id": "config_apikeys",
+      "community": 4,
+      "norm_label": "apikeys"
+    },
+    {
+      "label": "AudioConfig",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L55",
+      "id": "config_audioconfig",
+      "community": 3,
+      "norm_label": "audioconfig"
+    },
+    {
+      "label": "STTConfig",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L80",
+      "id": "config_sttconfig",
+      "community": 4,
+      "norm_label": "sttconfig"
+    },
+    {
+      "label": "TTSConfig",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L95",
+      "id": "config_ttsconfig",
+      "community": 4,
+      "norm_label": "ttsconfig"
+    },
+    {
+      "label": "LLMConfig",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L106",
+      "id": "config_llmconfig",
+      "community": 4,
+      "norm_label": "llmconfig"
+    },
+    {
+      "label": "PipelineConfig",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L134",
+      "id": "config_pipelineconfig",
+      "community": 4,
+      "norm_label": "pipelineconfig"
+    },
+    {
+      "label": "Config",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L148",
+      "id": "config_config",
+      "community": 9,
+      "norm_label": "config"
+    },
+    {
+      "label": "load_config()",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L157",
+      "id": "config_load_config",
+      "community": 0,
+      "norm_label": "load_config()"
+    },
+    {
+      "label": "config.py \u2014 Environment parsing, validation, and runtime constants. All secrets",
+      "file_type": "rationale",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "id": "config_rationale_1",
+      "community": 4,
+      "norm_label": "config.py \u2014 environment parsing, validation, and runtime constants. all secrets"
+    },
+    {
+      "label": "Raise EnvironmentError if key is absent or empty.",
+      "file_type": "rationale",
+      "source_file": "config.py",
+      "source_location": "L30",
+      "id": "config_rationale_30",
+      "community": 4,
+      "norm_label": "raise environmenterror if key is absent or empty."
+    },
+    {
+      "label": "Validate and return a frozen Config instance. Raises on missing keys.",
+      "file_type": "rationale",
+      "source_file": "config.py",
+      "source_location": "L158",
+      "id": "config_rationale_158",
+      "community": 0,
+      "norm_label": "validate and return a frozen config instance. raises on missing keys."
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "main",
+      "community": 0,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "_ShutdownController",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L28",
+      "id": "main_shutdowncontroller",
+      "community": 0,
+      "norm_label": "_shutdowncontroller"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L29",
+      "id": "main_shutdowncontroller_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".request_shutdown()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L32",
+      "id": "main_shutdowncontroller_request_shutdown",
+      "community": 0,
+      "norm_label": ".request_shutdown()"
+    },
+    {
+      "label": ".wait()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L37",
+      "id": "main_shutdowncontroller_wait",
+      "community": 0,
+      "norm_label": ".wait()"
+    },
+    {
+      "label": "_amain()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L44",
+      "id": "main_amain",
+      "community": 0,
+      "norm_label": "_amain()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L81",
+      "id": "main_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "main.py \u2014 Graceful initialization, SIGINT/SIGTERM handlers, and clean shutdown.",
+      "file_type": "rationale",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "id": "main_rationale_1",
+      "community": 0,
+      "norm_label": "main.py \u2014 graceful initialization, sigint/sigterm handlers, and clean shutdown."
+    },
+    {
+      "label": "pipeline.py",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L1",
+      "id": "pipeline",
+      "community": 9,
+      "norm_label": "pipeline.py"
+    },
+    {
+      "label": "STTWorker",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L54",
+      "id": "pipeline_sttworker",
+      "community": 9,
+      "norm_label": "sttworker"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "id": "pipeline_sttworker_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "Config",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "id": "pipeline_py_config",
+      "community": 8,
+      "norm_label": "config"
+    },
+    {
+      "label": "AudioQueue",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "id": "pipeline_py_audioqueue",
+      "community": 9,
+      "norm_label": "audioqueue"
+    },
+    {
+      "label": "Queue",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "id": "queue",
+      "community": 8,
+      "norm_label": "queue"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L74",
+      "id": "pipeline_sttworker_run",
+      "community": 5,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._on_transcript()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L130",
+      "id": "pipeline_sttworker_on_transcript",
+      "community": 9,
+      "norm_label": "._on_transcript()"
+    },
+    {
+      "label": "._on_error()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L149",
+      "id": "pipeline_sttworker_on_error",
+      "community": 9,
+      "norm_label": "._on_error()"
+    },
+    {
+      "label": "LLMWorker",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L157",
+      "id": "pipeline_llmworker",
+      "community": 11,
+      "norm_label": "llmworker"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L163",
+      "id": "pipeline_llmworker_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L192",
+      "id": "pipeline_llmworker_run",
+      "community": 11,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._stream_response()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L222",
+      "id": "pipeline_llmworker_stream_response",
+      "community": 11,
+      "norm_label": "._stream_response()"
+    },
+    {
+      "label": "._log_to_disk()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L268",
+      "id": "pipeline_llmworker_log_to_disk",
+      "community": 11,
+      "norm_label": "._log_to_disk()"
+    },
+    {
+      "label": "TTSWorker",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L280",
+      "id": "pipeline_ttsworker",
+      "community": 10,
+      "norm_label": "ttsworker"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "id": "pipeline_ttsworker_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "AudioOutputRouter",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "id": "pipeline_py_audiooutputrouter",
+      "community": 8,
+      "norm_label": "audiooutputrouter"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L295",
+      "id": "pipeline_ttsworker_run",
+      "community": 10,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._apply_fade_out()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L349",
+      "id": "pipeline_ttsworker_apply_fade_out",
+      "community": 10,
+      "norm_label": "._apply_fade_out()"
+    },
+    {
+      "label": "._synthesize_and_stream()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L369",
+      "id": "pipeline_ttsworker_synthesize_and_stream",
+      "community": 10,
+      "norm_label": "._synthesize_and_stream()"
+    },
+    {
+      "label": "ClientSession",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L369",
+      "id": "clientsession",
+      "community": 10,
+      "norm_label": "clientsession"
+    },
+    {
+      "label": "VoicePipeline",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L420",
+      "id": "pipeline_voicepipeline",
+      "community": 5,
+      "norm_label": "voicepipeline"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L426",
+      "id": "pipeline_voicepipeline_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L445",
+      "id": "pipeline_voicepipeline_start",
+      "community": 5,
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L453",
+      "id": "pipeline_voicepipeline_stop",
+      "community": 5,
+      "norm_label": ".stop()"
+    },
+    {
+      "label": ".hot_interrupt_pipeline()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L475",
+      "id": "pipeline_voicepipeline_hot_interrupt_pipeline",
+      "community": 5,
+      "norm_label": ".hot_interrupt_pipeline()"
+    },
+    {
+      "label": ".reset_interrupt()",
+      "file_type": "code",
+      "source_file": "pipeline.py",
+      "source_location": "L511",
+      "id": "pipeline_voicepipeline_reset_interrupt",
+      "community": 5,
+      "norm_label": ".reset_interrupt()"
+    },
+    {
+      "label": "pipeline.py \u2014 Asyncio core loop orchestrating STT \u2192 LLM \u2192 TTS.  Stage topology (",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L1",
+      "id": "pipeline_rationale_1",
+      "community": 9,
+      "norm_label": "pipeline.py \u2014 asyncio core loop orchestrating stt \u2192 llm \u2192 tts.  stage topology ("
+    },
+    {
+      "label": "Consumes raw PCM from `audio_queue`, forwards to Deepgram Live STT,     and push",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L55",
+      "id": "pipeline_rationale_55",
+      "community": 9,
+      "norm_label": "consumes raw pcm from `audio_queue`, forwards to deepgram live stt,     and push"
+    },
+    {
+      "label": "Consumes transcripts from `transcript_queue`, streams responses from     Gemini",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L158",
+      "id": "pipeline_rationale_158",
+      "community": 11,
+      "norm_label": "consumes transcripts from `transcript_queue`, streams responses from     gemini"
+    },
+    {
+      "label": "Stream Gemini response without blocking the asyncio event loop.          FIX: Th",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L223",
+      "id": "pipeline_rationale_223",
+      "community": 11,
+      "norm_label": "stream gemini response without blocking the asyncio event loop.          fix: th"
+    },
+    {
+      "label": "Isolated synchronous disk writer \u2014 always called from thread pool only.",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L269",
+      "id": "pipeline_rationale_269",
+      "community": 11,
+      "norm_label": "isolated synchronous disk writer \u2014 always called from thread pool only."
+    },
+    {
+      "label": "Consumes text chunks from `tts_text_queue`, synthesizes PCM audio      via Deepg",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L281",
+      "id": "pipeline_rationale_281",
+      "community": 10,
+      "norm_label": "consumes text chunks from `tts_text_queue`, synthesizes pcm audio      via deepg"
+    },
+    {
+      "label": "Apply a smooth linear fade-out to the final samples of a PCM chunk.",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L350",
+      "id": "pipeline_rationale_350",
+      "community": 10,
+      "norm_label": "apply a smooth linear fade-out to the final samples of a pcm chunk."
+    },
+    {
+      "label": "Owns all three workers and their inter-stage queues.     Call `run()` from the a",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L421",
+      "id": "pipeline_rationale_421",
+      "community": 5,
+      "norm_label": "owns all three workers and their inter-stage queues.     call `run()` from the a"
+    },
+    {
+      "label": "Graceful shutdown: inject sentinel, then wait for drain.",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L454",
+      "id": "pipeline_rationale_454",
+      "community": 5,
+      "norm_label": "graceful shutdown: inject sentinel, then wait for drain."
+    },
+    {
+      "label": "Instantly silences AI output and purges all pending queues.          Call this w",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L476",
+      "id": "pipeline_rationale_476",
+      "community": 5,
+      "norm_label": "instantly silences ai output and purges all pending queues.          call this w"
+    },
+    {
+      "label": "Re-enables AI audio output after a hot interrupt.",
+      "file_type": "rationale",
+      "source_file": "pipeline.py",
+      "source_location": "L512",
+      "id": "pipeline_rationale_512",
+      "community": 5,
+      "norm_label": "re-enables ai audio output after a hot interrupt."
+    },
+    {
+      "label": "runner.sh",
+      "file_type": "code",
+      "source_file": "runner.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "runner",
+      "community": 12,
+      "norm_label": "runner.sh"
+    },
+    {
+      "label": "runner.sh script",
+      "file_type": "code",
+      "source_file": "runner.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "home_salman_documents_projects_call_agent_runner_sh__entry",
+      "community": 12,
+      "norm_label": "runner.sh script"
+    },
+    {
+      "label": "test_dg.py",
+      "file_type": "code",
+      "source_file": "test_dg.py",
+      "source_location": "L1",
+      "id": "test_dg",
+      "community": 14,
+      "norm_label": "test_dg.py"
+    },
+    {
+      "label": "test_ws.py",
+      "file_type": "code",
+      "source_file": "test_ws.py",
+      "source_location": "L1",
+      "id": "test_ws",
+      "community": 13,
+      "norm_label": "test_ws.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test_ws.py",
+      "source_location": "L8",
+      "id": "test_ws_main",
+      "community": 13,
+      "norm_label": "main()"
+    },
+    {
+      "label": "ui_main.py",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L1",
+      "id": "ui_main",
+      "community": 0,
+      "norm_label": "ui_main.py"
+    },
+    {
+      "label": "UILogHandler",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L27",
+      "id": "ui_main_uiloghandler",
+      "community": 1,
+      "norm_label": "uiloghandler"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L28",
+      "id": "ui_main_uiloghandler_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".emit()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L33",
+      "id": "ui_main_uiloghandler_emit",
+      "community": 1,
+      "norm_label": ".emit()"
+    },
+    {
+      "label": "PipelineRunner",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L39",
+      "id": "ui_main_pipelinerunner",
+      "community": 1,
+      "norm_label": "pipelinerunner"
+    },
+    {
+      "label": "QThread",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "qthread",
+      "community": 1,
+      "norm_label": "qthread"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L43",
+      "id": "ui_main_pipelinerunner_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L49",
+      "id": "ui_main_pipelinerunner_run",
+      "community": 1,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._async_run()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L60",
+      "id": "ui_main_pipelinerunner_async_run",
+      "community": 1,
+      "norm_label": "._async_run()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L84",
+      "id": "ui_main_pipelinerunner_stop",
+      "community": 2,
+      "norm_label": ".stop()"
+    },
+    {
+      "label": "SingleInstanceServer",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L90",
+      "id": "ui_main_singleinstanceserver",
+      "community": 1,
+      "norm_label": "singleinstanceserver"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L94",
+      "id": "ui_main_singleinstanceserver_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".bind()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L99",
+      "id": "ui_main_singleinstanceserver_bind",
+      "community": 1,
+      "norm_label": ".bind()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L108",
+      "id": "ui_main_singleinstanceserver_run",
+      "community": 1,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "CallAgentUI",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L121",
+      "id": "ui_main_callagentui",
+      "community": 2,
+      "norm_label": "callagentui"
+    },
+    {
+      "label": "QMainWindow",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "qmainwindow",
+      "community": 2,
+      "norm_label": "qmainwindow"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L122",
+      "id": "ui_main_callagentui_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".append_log()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L253",
+      "id": "ui_main_callagentui_append_log",
+      "community": 2,
+      "norm_label": ".append_log()"
+    },
+    {
+      "label": ".start_pipeline()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L259",
+      "id": "ui_main_callagentui_start_pipeline",
+      "community": 2,
+      "norm_label": ".start_pipeline()"
+    },
+    {
+      "label": ".stop_pipeline()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L271",
+      "id": "ui_main_callagentui_stop_pipeline",
+      "community": 2,
+      "norm_label": ".stop_pipeline()"
+    },
+    {
+      "label": ".intercept_pipeline()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L280",
+      "id": "ui_main_callagentui_intercept_pipeline",
+      "community": 2,
+      "norm_label": ".intercept_pipeline()"
+    },
+    {
+      "label": ".resume_pipeline()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L294",
+      "id": "ui_main_callagentui_resume_pipeline",
+      "community": 2,
+      "norm_label": ".resume_pipeline()"
+    },
+    {
+      "label": ".on_pipeline_stopped()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L306",
+      "id": "ui_main_callagentui_on_pipeline_stopped",
+      "community": 2,
+      "norm_label": ".on_pipeline_stopped()"
+    },
+    {
+      "label": ".bring_to_front()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L314",
+      "id": "ui_main_callagentui_bring_to_front",
+      "community": 2,
+      "norm_label": ".bring_to_front()"
+    },
+    {
+      "label": ".closeEvent()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L319",
+      "id": "ui_main_callagentui_closeevent",
+      "community": 2,
+      "norm_label": ".closeevent()"
+    },
+    {
+      "label": "QCloseEvent",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L319",
+      "id": "qcloseevent",
+      "community": 2,
+      "norm_label": "qcloseevent"
+    },
+    {
+      "label": "check_single_instance_or_notify()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L328",
+      "id": "ui_main_check_single_instance_or_notify",
+      "community": 1,
+      "norm_label": "check_single_instance_or_notify()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "ui_main.py",
+      "source_location": "L343",
+      "id": "ui_main_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "ui_main.py \u2014 Lightweight, branded GUI for the Voice-to-Voice Pipeline. Includes",
+      "file_type": "rationale",
+      "source_file": "ui_main.py",
+      "source_location": "L1",
+      "id": "ui_main_rationale_1",
+      "community": 0,
+      "norm_label": "ui_main.py \u2014 lightweight, branded gui for the voice-to-voice pipeline. includes"
+    },
+    {
+      "label": "Founder takeover: instantly silence AI, purge queues.",
+      "file_type": "rationale",
+      "source_file": "ui_main.py",
+      "source_location": "L281",
+      "id": "ui_main_rationale_281",
+      "community": 2,
+      "norm_label": "founder takeover: instantly silence ai, purge queues."
+    },
+    {
+      "label": "Re-enable AI audio after a founder intercept.",
+      "file_type": "rationale",
+      "source_file": "ui_main.py",
+      "source_location": "L295",
+      "id": "ui_main_rationale_295",
+      "community": 2,
+      "norm_label": "re-enable ai audio after a founder intercept."
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 6,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Enterprise Voice-to-Voice AI Agent (Proof of Concept)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "community": 6,
+      "norm_label": "enterprise voice-to-voice ai agent (proof of concept)"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L3",
+      "id": "readme_overview",
+      "community": 6,
+      "norm_label": "overview"
+    },
+    {
+      "label": "\ud83d\udcca Architectural Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "id": "readme_architectural_workflow",
+      "community": 6,
+      "norm_label": "\ud83d\udcca architectural workflow"
+    },
+    {
+      "label": "Core Capabilities Highlighted",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "id": "readme_core_capabilities_highlighted",
+      "community": 6,
+      "norm_label": "core capabilities highlighted"
+    },
+    {
+      "label": "Future Integration: Smartech B2B Infrastructure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L44",
+      "id": "readme_future_integration_smartech_b2b_infrastructure",
+      "community": 6,
+      "norm_label": "future integration: smartech b2b infrastructure"
+    },
+    {
+      "label": "Technical Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "id": "readme_technical_stack",
+      "community": 6,
+      "norm_label": "technical stack"
+    },
+    {
+      "label": "About ABT Plus LLC",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "id": "readme_about_abt_plus_llc",
+      "community": 6,
+      "norm_label": "about abt plus llc"
+    },
+    {
+      "label": "\u2696\ufe0f Open-Source Academic Licensing & Disclaimer",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "id": "readme_open_source_academic_licensing_disclaimer",
+      "community": 6,
+      "norm_label": "\u2696\ufe0f open-source academic licensing & disclaimer"
+    },
+    {
+      "label": "\ud83d\udcec Contact & Corporate Information",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "id": "readme_contact_corporate_information",
+      "community": 6,
+      "norm_label": "\ud83d\udcec contact & corporate information"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_audioinputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_list_audio_devices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_managed_input_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L274",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_managed_output_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "audio_router_resolve_device_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "audio_router",
+      "target": "config_audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "audio_router_rationale_1",
+      "target": "audio_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "main",
+      "target": "audio_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "audio_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "audio_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "audio_router_rationale_31",
+      "target": "audio_router_list_audio_devices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "main",
+      "target": "audio_router_list_audio_devices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "audio_router_list_audio_devices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_start",
+      "target": "audio_router_resolve_device_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter_start",
+      "target": "audio_router_resolve_device_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "audio_router_rationale_49",
+      "target": "audio_router_resolve_device_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_callback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_safe_put",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_safe_put_sentinel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter",
+      "target": "audio_router_audioinputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "audio_router_audioinputrouter",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audio_router_audioinputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "audio_router_rationale_72",
+      "target": "audio_router_audioinputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_init",
+      "target": "abstracteventloop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_init",
+      "target": "audio_router_py_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_init",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_init",
+      "target": "audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter_init",
+      "target": "audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L274",
+      "weight": 1.0,
+      "source": "audio_router_managed_output_router",
+      "target": "audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "audioconfig",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "audio_router_py_audioqueue",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "clientsession",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_llmworker",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_audiooutputrouter",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_audioqueue",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_config",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_sttworker",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_ttsworker",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_voicepipeline",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "queue",
+      "target": "audio_router_py_audioqueue",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "abstracteventloop",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "abstracteventloop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "audio_router_py_audiooutputrouter",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_start",
+      "target": "audio_router_audiooutputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "audio_router_audioinputrouter_stop",
+      "target": "audio_router_audiooutputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_is_playing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_reset_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_trigger_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "audio_router.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "source": "audio_router_audiooutputrouter",
+      "target": "config_audioconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L274",
+      "weight": 1.0,
+      "source": "audio_router_managed_output_router",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "audio_router_rationale_162",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "clientsession",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_llmworker",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_audiooutputrouter",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_audioqueue",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_py_config",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_sttworker",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_ttsworker",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "pipeline_voicepipeline",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 0.8,
+      "source": "queue",
+      "target": "audio_router_audiooutputrouter",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter_trigger_interrupt",
+      "target": "audio_router_audiooutputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audio_router_audiooutputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "audio_router_managed_output_router",
+      "target": "audio_router_audiooutputrouter_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "audio_router_rationale_196",
+      "target": "audio_router_audiooutputrouter_write",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "audio_router_audiooutputrouter_trigger_interrupt",
+      "target": "audio_router_audiooutputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "audio_router_rationale_215",
+      "target": "audio_router_audiooutputrouter_trigger_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "audio_router_rationale_232",
+      "target": "audio_router_audiooutputrouter_reset_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "audio_router_rationale_239",
+      "target": "audio_router_audiooutputrouter_is_playing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L270",
+      "weight": 1.0,
+      "source": "audio_router_managed_input_router",
+      "target": "audio_router_audiooutputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "audio_router.py",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "audio_router_managed_output_router",
+      "target": "audio_router_audiooutputrouter_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "main",
+      "target": "audio_router_managed_input_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "audio_router_managed_input_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "audio_router_managed_input_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ui_main.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "audio_router_managed_input_router"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "main",
+      "target": "audio_router_managed_output_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "audio_router_managed_output_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "audio_router_managed_output_router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ui_main.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "audio_router_managed_output_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_apikeys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_audioconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_llmconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_optional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_pipelineconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_sttconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "config_py_config",
+      "target": "config_ttsconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "config_rationale_1",
+      "target": "config_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "config_rationale_30",
+      "target": "config_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "clientsession",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "config_load_config",
+      "target": "config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_llmworker",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_py_audiooutputrouter",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_py_audioqueue",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_py_config",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_sttworker",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_ttsworker",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "pipeline_voicepipeline",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 0.8,
+      "source": "queue",
+      "target": "config_config",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "config_rationale_158",
+      "target": "config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "main",
+      "target": "config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ui_main.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "config_load_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "main",
+      "target": "main_amain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "main",
+      "target": "main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "main",
+      "target": "main_shutdowncontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "main",
+      "target": "pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "main",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "main_rationale_1",
+      "target": "main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "main_shutdowncontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "main_shutdowncontroller",
+      "target": "main_shutdowncontroller_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "main_shutdowncontroller",
+      "target": "main_shutdowncontroller_request_shutdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "main_shutdowncontroller",
+      "target": "main_shutdowncontroller_wait",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "main.py",
+      "source_location": "L20",
+      "weight": 0.8,
+      "source": "main_shutdowncontroller",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "main_shutdowncontroller_request_shutdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "main_shutdowncontroller_wait",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "main_amain",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "main_main",
+      "target": "main_amain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_llmworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_py_audioqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_sttworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_ttsworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L420",
+      "weight": 1.0,
+      "source": "pipeline",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "pipeline_rationale_1",
+      "target": "pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "pipeline_rationale_55",
+      "target": "pipeline_sttworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "pipeline_sttworker",
+      "target": "pipeline_sttworker_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "pipeline_sttworker",
+      "target": "pipeline_sttworker_on_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "pipeline_sttworker",
+      "target": "pipeline_sttworker_on_transcript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "pipeline_sttworker",
+      "target": "pipeline_sttworker_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "pipeline_sttworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "pipeline_sttworker_init",
+      "target": "pipeline_py_audioqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "pipeline_sttworker_init",
+      "target": "pipeline_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "pipeline_sttworker_init",
+      "target": "queue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "pipeline_llmworker_init",
+      "target": "pipeline_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_init",
+      "target": "pipeline_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "pipeline_py_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "pipeline_llmworker_init",
+      "target": "queue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_init",
+      "target": "queue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L431",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "queue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "pipeline_sttworker_run",
+      "target": "pipeline_voicepipeline_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "pipeline_llmworker",
+      "target": "pipeline_llmworker_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "pipeline_llmworker",
+      "target": "pipeline_llmworker_log_to_disk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "pipeline_llmworker",
+      "target": "pipeline_llmworker_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "pipeline_llmworker",
+      "target": "pipeline_llmworker_stream_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "pipeline_rationale_158",
+      "target": "pipeline_llmworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L440",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "pipeline_llmworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "pipeline_llmworker_run",
+      "target": "pipeline_llmworker_stream_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "pipeline_rationale_223",
+      "target": "pipeline_llmworker_stream_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "pipeline_rationale_269",
+      "target": "pipeline_llmworker_log_to_disk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "pipeline_rationale_281",
+      "target": "pipeline_ttsworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker",
+      "target": "pipeline_ttsworker_apply_fade_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker",
+      "target": "pipeline_ttsworker_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker",
+      "target": "pipeline_ttsworker_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L369",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker",
+      "target": "pipeline_ttsworker_synthesize_and_stream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L441",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "pipeline_ttsworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_init",
+      "target": "pipeline_py_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_init",
+      "target": "pipeline_py_audiooutputrouter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_run",
+      "target": "clientsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_run",
+      "target": "pipeline_ttsworker_synthesize_and_stream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L448",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline_start",
+      "target": "pipeline_ttsworker_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "pipeline_rationale_350",
+      "target": "pipeline_ttsworker_apply_fade_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L399",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_synthesize_and_stream",
+      "target": "pipeline_ttsworker_apply_fade_out",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L369",
+      "weight": 1.0,
+      "source": "pipeline_ttsworker_synthesize_and_stream",
+      "target": "clientsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L421",
+      "weight": 1.0,
+      "source": "pipeline_rationale_421",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L475",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline",
+      "target": "pipeline_voicepipeline_hot_interrupt_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline",
+      "target": "pipeline_voicepipeline_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L511",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline",
+      "target": "pipeline_voicepipeline_reset_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L445",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline",
+      "target": "pipeline_voicepipeline_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L453",
+      "weight": 1.0,
+      "source": "pipeline_voicepipeline",
+      "target": "pipeline_voicepipeline_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "source": "qcloseevent",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "source": "ui_main_callagentui",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "source": "ui_main_pipelinerunner",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ui_main.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "pipeline_voicepipeline"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "source": "ui_main_singleinstanceserver",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "ui_main.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "source": "ui_main_uiloghandler",
+      "target": "pipeline_voicepipeline",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L454",
+      "weight": 1.0,
+      "source": "pipeline_rationale_454",
+      "target": "pipeline_voicepipeline_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L476",
+      "weight": 1.0,
+      "source": "pipeline_rationale_476",
+      "target": "pipeline_voicepipeline_hot_interrupt_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline.py",
+      "source_location": "L512",
+      "weight": 1.0,
+      "source": "pipeline_rationale_512",
+      "target": "pipeline_voicepipeline_reset_interrupt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "runner.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "runner",
+      "target": "home_salman_documents_projects_call_agent_runner_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_ws.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "test_ws",
+      "target": "test_ws_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_callagentui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_check_single_instance_or_notify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L343",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_pipelinerunner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_singleinstanceserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "ui_main",
+      "target": "ui_main_uiloghandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ui_main_rationale_1",
+      "target": "ui_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_init",
+      "target": "ui_main_uiloghandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "ui_main_uiloghandler",
+      "target": "ui_main_uiloghandler_emit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "ui_main_uiloghandler",
+      "target": "ui_main_uiloghandler_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "ui_main_uiloghandler_init",
+      "target": "ui_main_callagentui_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "ui_main_uiloghandler_emit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_run",
+      "target": "ui_main_uiloghandler_emit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver_run",
+      "target": "ui_main_uiloghandler_emit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_init",
+      "target": "ui_main_pipelinerunner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner",
+      "target": "qthread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner",
+      "target": "ui_main_pipelinerunner_async_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner",
+      "target": "ui_main_pipelinerunner_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner",
+      "target": "ui_main_pipelinerunner_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner",
+      "target": "ui_main_pipelinerunner_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver",
+      "target": "qthread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_init",
+      "target": "ui_main_callagentui_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_run",
+      "target": "ui_main_pipelinerunner_async_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_run",
+      "target": "ui_main_singleinstanceserver_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "ui_main_pipelinerunner_async_run",
+      "target": "ui_main_pipelinerunner_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L322",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_closeevent",
+      "target": "ui_main_pipelinerunner_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_stop_pipeline",
+      "target": "ui_main_pipelinerunner_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "ui_main_check_single_instance_or_notify",
+      "target": "ui_main_singleinstanceserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver",
+      "target": "ui_main_singleinstanceserver_bind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver",
+      "target": "ui_main_singleinstanceserver_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver",
+      "target": "ui_main_singleinstanceserver_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "ui_main_singleinstanceserver_init",
+      "target": "ui_main_callagentui_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L331",
+      "weight": 1.0,
+      "source": "ui_main_check_single_instance_or_notify",
+      "target": "ui_main_singleinstanceserver_bind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "qmainwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_bring_to_front",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_closeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_intercept_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L306",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_on_pipeline_stopped",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_resume_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_start_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "ui_main_callagentui",
+      "target": "ui_main_callagentui_stop_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L348",
+      "weight": 1.0,
+      "source": "ui_main_main",
+      "target": "ui_main_callagentui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_init",
+      "target": "ui_main_callagentui_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_intercept_pipeline",
+      "target": "ui_main_callagentui_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_on_pipeline_stopped",
+      "target": "ui_main_callagentui_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_resume_pipeline",
+      "target": "ui_main_callagentui_append_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "ui_main_rationale_281",
+      "target": "ui_main_callagentui_intercept_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "ui_main_rationale_295",
+      "target": "ui_main_callagentui_resume_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "ui_main_callagentui_closeevent",
+      "target": "qcloseevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ui_main.py",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "ui_main_main",
+      "target": "ui_main_check_single_instance_or_notify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_about_abt_plus_llc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_architectural_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_contact_corporate_information",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_core_capabilities_highlighted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_future_integration_smartech_b2b_infrastructure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_open_source_academic_licensing_disclaimer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "readme_enterprise_voice_to_voice_ai_agent_proof_of_concept",
+      "target": "readme_technical_stack",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "ee880dd34d79911719ace306eac887d4e04b582b"
+}

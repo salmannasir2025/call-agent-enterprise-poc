@@ -1,7 +1,7 @@
 #!/bin/bash
 # Runner script for Call Agent UI
 
-cd "/home/salman/Documents/projects/call agent"
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # Ensure venv exists
 if [ ! -d ".venv" ]; then

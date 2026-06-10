@@ -1,0 +1,57 @@
+{
+  "audio_router.py": {
+    "mtime": 1779127495.7554488,
+    "ast_hash": "d837edeb90fc3f86505e283de6aad79f",
+    "semantic_hash": ""
+  },
+  "config.py": {
+    "mtime": 1779123940.4457798,
+    "ast_hash": "9c3f24cdb0d3d1e9b81269fe85a36d8f",
+    "semantic_hash": ""
+  },
+  "main.py": {
+    "mtime": 1779113341.430081,
+    "ast_hash": "46d7b177adc5d748df44bb7a8f586a8c",
+    "semantic_hash": ""
+  },
+  "pipeline.py": {
+    "mtime": 1779127710.6850338,
+    "ast_hash": "c41e409d91b513980f83590d1cb8d6d4",
+    "semantic_hash": ""
+  },
+  "runner.sh": {
+    "mtime": 1781065756.9876409,
+    "ast_hash": "ebefebacae77484a31ab8c7b71e39daa",
+    "semantic_hash": ""
+  },
+  "test_dg.py": {
+    "mtime": 1779123837.582653,
+    "ast_hash": "ec5a511963de3ba461d1374164370245",
+    "semantic_hash": ""
+  },
+  "test_ws.py": {
+    "mtime": 1779123962.6129508,
+    "ast_hash": "43fc0cf178b2a07db637e7677109a853",
+    "semantic_hash": ""
+  },
+  "ui_main.py": {
+    "mtime": 1781065783.5230768,
+    "ast_hash": "759b449e36e5288a722f08eeebdb80b5",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1779303958.6012032,
+    "ast_hash": "7c261c354871c19c468767eeb05dde54",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1779113367.8043723,
+    "ast_hash": "a03ea98360072eb3879edaf1a1cb0559",
+    "semantic_hash": ""
+  },
+  "Voice_AI_Latency_Reduction_Infographic.png": {
+    "mtime": 1779121732.1167214,
+    "ast_hash": "c4a7a67a6ee94236d9deaae5e6a8552f",
+    "semantic_hash": ""
+  }
+}
